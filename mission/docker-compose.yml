@@ -3,7 +3,9 @@ version: '2'
 services:
 
   jupyter1:
-    image: demiddleday3_jupyter:latest
+    build:
+      context: jupyter1
+      dockerfile: ./Dockerfile.yml
     network_mode: "host"
     ports:
       - 8883:8883
@@ -11,7 +13,9 @@ services:
       - ./jupyter1:/jupyter1
 
   jupyter2:
-    image: demiddleday3_jupyter:latest
+    build:
+      context: jupyter2
+      dockerfile: ./Dockerfile.yml
     network_mode: "host"
     ports:
       - 8884:8884
@@ -19,7 +23,9 @@ services:
       - ./jupyter2:/jupyter2
 
   jupyter3:
-    image: demiddleday3_jupyter:latest
+    build:
+      context: jupyter3
+      dockerfile: ./Dockerfile.yml
     network_mode: "host"
     ports:
       - 8885:8885
@@ -27,7 +33,9 @@ services:
       - ./jupyter3:/jupyter3
 
   jupyter4:
-    image: demiddleday3_jupyter:latest
+    build:
+      context: jupyter4
+      dockerfile: ./Dockerfile.yml
     network_mode: "host"
     ports:
       - 8886:8886
@@ -35,7 +43,9 @@ services:
       - ./jupyter4:/jupyter4
 
   jupyter5:
-    image: demiddleday3_jupyter:latest
+    build:
+      context: jupyter5
+      dockerfile: ./Dockerfile.yml
     network_mode: "host"
     ports:
       - 8887:8887
@@ -44,7 +54,7 @@ services:
 
   kafka-flink-consumer:
     build:
-      context: consumer
+      context: flink_consumer
       dockerfile: ./Dockerfile.yml
     network_mode: "host"
     ports:
