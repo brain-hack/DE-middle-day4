@@ -1,0 +1,7 @@
+word
+Firstly you can fire up your favorite IDE and create a Python project and then you need to install the PyFlink package Please see Build PyFlink for more details about this The first step in a Flink Python Table API program is to create a BatchTableEnvironment or StreamTableEnvironment if you are writing a streaming job It is the main entry point for Python Table API jobs
+The ExecutionEnvironment or StreamExecutionEnvironment if you are writing a streaming job can be used to set execution parameters such as the restart strategy default parallelism etc
+The TableConfig can be used by setting the parameters such as the built-in catalog name the threshold where generating code etc
+This registers a table named mySource and a table named mySink in the ExecutionEnvironment The table mySource has only one column word It represents the words read from file tmp input The table mySink has two columns word and count It writes data to file /tmp/output with \t as the field delimiter
+Then we need to create a job which reads input from table mySource preforms some operations and writes the results to table mySink
+Next we will create a source table and a sink table
