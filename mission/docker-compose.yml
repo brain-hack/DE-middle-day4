@@ -10,37 +10,37 @@ services:
     volumes:
       - ./jupyter1:/jupyter1
 
-    jupyter2:
-      image: demiddleday3_jupyter:latest
-      network_mode: "host"
-      ports:
-        - 8884:8884
-      volumes:
-        - ./jupyter2:/jupyter2
+  jupyter2:
+    image: demiddleday3_jupyter:latest
+    network_mode: "host"
+    ports:
+      - 8884:8884
+    volumes:
+      - ./jupyter2:/jupyter2
 
-    jupyter3:
-      image: demiddleday3_jupyter:latest
-      network_mode: "host"
-      ports:
-        - 8885:8885
-      volumes:
-        - ./jupyter3:/jupyter3
+  jupyter3:
+    image: demiddleday3_jupyter:latest
+    network_mode: "host"
+    ports:
+      - 8885:8885
+    volumes:
+      - ./jupyter3:/jupyter3
 
-    jupyter4:
-      image: demiddleday3_jupyter:latest
-      network_mode: "host"
-      ports:
-        - 8886:8886
-      volumes:
-        - ./jupyter4:/jupyter4
+  jupyter4:
+    image: demiddleday3_jupyter:latest
+    network_mode: "host"
+    ports:
+      - 8886:8886
+    volumes:
+      - ./jupyter4:/jupyter4
 
-    jupyter5:
-      image: demiddleday3_jupyter:latest
-      network_mode: "host"
-      ports:
-        - 8887:8887
-      volumes:
-        - ./jupyter5:/jupyter5
+  jupyter5:
+    image: demiddleday3_jupyter:latest
+    network_mode: "host"
+    ports:
+      - 8887:8887
+    volumes:
+      - ./jupyter5:/jupyter5
 
   kafka-flink-consumer:
     build:
